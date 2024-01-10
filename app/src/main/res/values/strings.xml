@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Fusion Adaptor</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="requestedamount">RequestedAmount</string>
+    <string name="itemamount">ItemAmount</string>
+    <string name="tipamount">TipAmount</string>
+    <string name="product_code">Product Code</string>
+    <string name="ui_header">Transaction UI Display</string>
+    <string name="authourized_amount">Authourized Amount</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="surcharge_amount">Surcharge Amount</string>
+    <string name="card_account">Card Account</string>
+    <string name="payment_brand">Payment Brand</string>
+    <string name="entry_mode">Entry Mode</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="masked_pan">Masked PAN</string>
+    <string name="service_id">Service ID</string>
+    <string name="pairing_steps_draft">1. On the DataMesh terminal, press the ⚙ (gear) icon, enter the merchant password, and press "Pair with POS"\n\n2. Scan the QR code using the DataMesh terminal, and follow the instructions on the terminal screen.\n\n3. After the terminal has successfully paired with the POS, press Next</string>
+    <string name="test_string_long">description of sdadngngngngngsgdsgsgrorasdasdasdasdasdasdasdsa\n\ndouble line break\nlastline</string>
+    <string name="test_string_short">test string short</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="unpair"><u>Unpair from Terminal</u></string>
+    <string name="paired_with_a_terminal">PAIRED WITH A TERMINAL</string>
+    <string name="not_paired_with_a_terminal">NOT PAIRED WITH A TERMINAL</string>
+    <string name="pair_with_terminal">Pair with Terminal</string>
+    <string name="login">LOGIN</string>
+    <string name="connecting_to_datamesh">Connecting to Datamesh</string>
+    <string name="waiting_for_poi_response">Waiting for Terminal...</string>
+    <string name="aborting_transaction_header">ABORTING TRANSACTION</string>
+    <string name="unpair_terminal">UNPAIR TERMINAL</string>
+    <string name="close">CLOSE</string>
+    <string name="pairing_steps">1. On the DataMesh terminal, press the ⚙ (gear) icon, enter the merchant password, and press: Pair with POS.\n\n2. Scan the QR code using the DataMesh terminal, and follow the instructions on the terminal screen.\n\n3. After the terminal has successfully paired with the POS, press Next, below.</string>
+    <string name="enter_credentials_manually">Enter Credentials Manually</string>
+    <string name="pairing_failed">PAIRING FAILED</string>
+    <string name="pairing_successful">PAIRING SUCCESSFUL</string>
+
+</resources>

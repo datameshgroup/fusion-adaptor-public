@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context="screens.PairingActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutTerminalPairing"
+        android:background="@drawable/rectangle_white"
+        android:layout_width="560dp"
+        android:layout_height="560dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_marginTop="35dp"
+            android:id="@+id/lblTerminalPairing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Terminal Pairing"
+            android:textSize="24sp"
+            android:textColor="#868686"
+            />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="35dp">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:id="@+id/ivQrCode"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblPairingSteps"
+                    android:text="@string/pairing_steps"
+                    android:textAppearance="@style/pairing_steps_"
+                    android:lineSpacingExtra="1sp"
+                    android:gravity="top"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEnterManually"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="bottom"
+                    style="@style/Button.Secondary"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/enter_credentials_manually" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="35dp"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/txtPairingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:gravity="end"
+                android:text="Logging in..."/>
+
+            <ProgressBar
+                android:id="@+id/progressCircle"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"
+                android:visibility="gone"
+                 />
+<!--            android:visibility="gone"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_marginBottom="35dp"
+            android:layout_marginHorizontal="35dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                style="@style/Button.Secondary"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dip"
+                android:enabled="false"
+                android:clickable="false"
+                android:text="Next"
+                style="@style/Button.Secondary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

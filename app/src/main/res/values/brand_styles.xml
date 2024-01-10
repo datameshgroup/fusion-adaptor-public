@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Dmg.Dark" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/dmgNavy</item>
+        <item name="colorPrimaryDark">@color/dmgNavy</item>
+<!--        <item name="colorSecondary">@color/dmgLightBlue</item>-->
+        <item name="android:navigationBarColor">@color/dmgNavyLight</item>
+        <item name="android:textColorPrimary">@color/white</item>
+<!--        <item name="android:colorBackground">@color/dmgNavy</item>-->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+
+
+    </style>
+
+    <style name="Theme.Dmg.Light" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/dmgWhite</item>
+        <item name="colorPrimaryDark">@color/dmgGrey</item>
+<!--        <item name="colorSecondary">@color/dmgGrey</item>-->
+        <item name="android:navigationBarColor">@color/dmgGrey</item>
+        <item name="android:textColorPrimary">@color/black</item>
+<!--        <item name="android:colorBackground">@color/dmgGrey</item>-->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+<!--    <style name="transparent_alertDialog" parent="Theme.AppCompat.Dialog.Alert">-->
+<!--        <item name="android:windowBackground">@null</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--    </style>-->
+</resources>

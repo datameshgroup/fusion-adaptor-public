@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="fragment_status"
+    tools:context=".screens.fragments.StatusFragment">
+
+    <ImageView
+        android:id="@+id/pairing_status_img"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="135.72dp"
+        android:layout_height="76.4dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_unpaired"
+        />
+
+    <FrameLayout
+        android:id="@+id/tr_header"
+        android:layout_width="450dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_header_red">
+        <TextView
+            android:id="@+id/txtPairingStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/not_paired_with_a_terminal"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="24sp"
+            android:gravity="center_horizontal|center_vertical"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txtPairedPOIID"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginVertical="22dp"
+        android:layout_gravity="center"
+        tools:text="POIID: INGB7797"
+        android:textSize="24sp"
+        android:gravity="center_horizontal|center_vertical"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="450dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp">
+
+        <!-- Add an empty view with layout_weight to push the button to the right -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            style="@style/Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/login"
+            android:layout_weight="1"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="450dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPair"
+            android:layout_width="0dp"
+            style="@style/Button.Secondary"
+            android:layout_marginEnd="12dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/unpair_terminal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            style="@style/Button.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/close" />
+
+    </LinearLayout>
+
+</LinearLayout>

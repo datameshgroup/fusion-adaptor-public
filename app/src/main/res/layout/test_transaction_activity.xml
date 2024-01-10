@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".screens.TestTransactionActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_margin="25sp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/label_item_amount"
+                    android:text="@string/itemamount" />
+
+                <EditText
+                    android:id="@+id/input_item_amount"
+                    android:text="99.99"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/label_tip_amount"
+                    android:text="@string/tipamount" />
+
+                <EditText
+                    android:id="@+id/input_tip_amount"
+                    android:text="1.50"
+                    android:inputType="numberDecimal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/label_product_code"
+                    android:text="@string/product_code" />
+
+                <EditText
+                    android:id="@+id/input_product_code"
+                    android:hint="SampleProductCode"
+                    android:inputType="text"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="6">
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_weight="1"
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+                <Button
+                    android:id="@+id/btnPurchase"
+                    android:layout_weight="1"
+                    android:text="Purchase"
+                    android:textAllCaps="false"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+                <Button
+                    android:id="@+id/btnRefund"
+                    android:layout_weight="1"
+                    android:text="Refund"
+                    android:textAllCaps="false"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_marginBottom="25sp"
+                android:layout_weight="1"
+                android:background="#191818">
+
+                <TextView
+                    android:id="@+id/edit_text_json_logs"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:fadeScrollbars="false"
+
+                    android:gravity="bottom"
+                    android:inputType="none"
+                    android:lineSpacingExtra="1sp"
+                    android:longClickable="true"
+                    android:scrollIndicators="end"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbarSize="5sp"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbarThumbVertical="@color/colorPrimary"
+                    android:scrollbars="vertical"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textIsSelectable="true" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_margin="25sp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="viewEnd">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_ui_header"
+                    android:layout_weight="1"
+                    android:text="@string/ui_header"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressCircle"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_ui_details"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Display UI Detail Here"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/text_timer"
+                android:inputType="none"
+                android:maxWidth="50sp"
+                android:textAlignment="textEnd"
+                android:textSize="20sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal|center_vertical">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:text="Cancel"
+                    android:visibility="invisible"
+                    android:textAllCaps="false"
+
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_authorize_amount"
+                    android:layout_width="168dp"
+                    android:text="@string/authourized_amount" />
+
+                <EditText
+                    android:id="@+id/response_authorize_amount_value"
+                    android:layout_weight="1"
+                    android:hint="0.00"
+                    android:inputType="none"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_tip_amount"
+                    android:text="@string/tip_amount" />
+
+                <EditText
+                    android:id="@+id/response_tip_amount_value"
+                    android:layout_weight="1"
+                    android:hint="0.00"
+                    android:inputType="none"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_surcharge_amount"
+                    android:text="@string/surcharge_amount" />
+
+                <EditText
+                    android:id="@+id/response_surcharge_amount_value"
+                    android:layout_weight="1"
+                    android:hint="0.00"
+                    android:inputType="none"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_masked_pan"
+                    android:text="@string/masked_pan" />
+
+                <EditText
+                    android:id="@+id/response_masked_pan"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_payment_brand"
+                    android:text="@string/payment_brand" />
+
+                <EditText
+                    android:id="@+id/response_payment_brand"
+                    android:layout_weight="1"
+                    android:inputType="none" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_entry_mode"
+                    android:text="@string/entry_mode" />
+
+                <EditText
+                    android:id="@+id/response_entry_mode"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/responselbl_service_id"
+                    android:text="@string/service_id" />
+
+                <EditText
+                    android:id="@+id/response_service_id"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:lineSpacingExtra="0sp"
+                    android:textStyle="italic"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </TableRow>
+            <TextView
+                android:text="Receipt:"
+                android:labelFor="@id/text_view_receipt"
+                />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/text_view_receipt"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FAF9F6"
+                    android:fadeScrollbars="false"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="1sp"
+                    android:maxHeight="250sp"
+                    android:minHeight="250sp"
+                    android:scrollbarThumbVertical="@color/colorAccent"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbars="vertical"
+                    android:scrollbarSize="5sp"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+    <!-- Right side spacer -->
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

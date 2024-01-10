@@ -1,0 +1,22 @@
+# Android Studio
+*.iml
+/.idea/
+/.gradle/
+/captures/
+/build/
+/local.properties
+
+# Gradle
+build/
+.gradle/
+
+# User-specific
+*.DS_Store
+*.jars
+
+# AndroidManifest file
+app/src/main/AndroidManifest.xml
+
+# Private
+app/src/main/java/au/com/dmg/fusionadaptor/hio
+app/build.gradle

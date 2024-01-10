@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FusionCloudSDKAndroidDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#6E9E5E</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Font -->
+        <item name="android:fontFamily">@font/ciutadella_regular</item>
+
+        <!-- Transparent -->
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.75</item>
+
+    </style>
+
+    <!-- Button -->
+    <!-- Style for the primary button -->
+    <style name="Button.Primary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_primary_background</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:width">190dp</item>
+        <item name="android:height">48dp</item>
+    </style>
+
+    <!-- Style for the secondary button -->
+    <style name="Button.Secondary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_secondary_background</item>
+        <item name="android:textColor">@color/dmgGrey</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:width">190dp</item>
+        <item name="android:height">48dp</item>
+    </style>
+
+    <style name="RoundedTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="android:textSize">12sp</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabSelectedTextColor">#6E9E5E</item>
+        <item name="tabGravity">start</item>
+        <item name="tabMinWidth">150dp</item>
+        <item name="tabIndicatorColor">#6E9E5E</item>
+    </style>
+
+    <style name="poiid_">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#12284B</item>
+    </style>
+
+    <style name="pairing_steps_">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

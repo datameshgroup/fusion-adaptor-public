@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "635652179224",
+    "project_id": "datamesh-fusion-adaptor-971c3",
+    "storage_bucket": "datamesh-fusion-adaptor-971c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635652179224:android:3c5bb4f37291f89fca0a6d",
+        "android_client_info": {
+          "package_name": "au.com.dmg.fusionadaptor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTu4dqnItO-r6cGr6k5YZ0fkD1wmitROI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

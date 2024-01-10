@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dark theme colours -->
+    <color name="dmgLightBlue">#4FAADD</color>
+    <color name="dmgDeepNavy">#12284C</color>
+    <color name="dmgNavy">#01111E</color>
+    <color name="dmgNavyLight">#1F5497</color>
+
+    <!-- Light theme colours -->
+    <color name="dmgWhite">#FFFFFF</color>
+    <color name="dmgGrey">#919191</color>
+
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="au.com.dmg.fusionadaptor"
+    android:versionCode="2"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <permission
+        android:name="au.com.dmg.fusionadaptor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="au.com.hiopos.datamesh.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:name="au.com.dmg.fusionadaptor.FusionAdaptor"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_display"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FusionCloudSDKAndroidDemo"
+        tools:targetApi="31" >
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.SettingsActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="au.com.dmg.fusionadaptor.MainActivity"
+            android:exported="true"
+            android:configChanges="uiMode">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+
+            <intent-filter>
+                <action android:name="icg.actions.electronicpayment.TefDatamesh.SHOW_SETUP_SCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- From Cloud -->
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.ConfigurationActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:exported="false" />
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.OldSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.PairingActivity"
+            android:exported="false" />
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.PairingResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.TransactionProgressActivity"
+            android:exported="true" />
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.RequestActivity"
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name="au.com.dmg.fusionadaptor.screens.TestTransactionActivity"
+            android:exported="false" > <!-- android:exported="true"> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="au.com.dmg.fusionadaptor.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

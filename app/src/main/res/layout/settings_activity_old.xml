@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    tools:context=".screens.OldSettingActivity">
+
+    <Button
+        android:id="@+id/btnViewConfig"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="100sp"
+        android:text="View Config"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPairTerminal"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="32sp"
+        android:text="Pair Terminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewConfig" />
+
+    <Button
+        android:id="@+id/btnUnpairTerminal"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="32sp"
+        android:text="Unpair Terminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPairTerminal" />
+
+    <Button
+        android:id="@+id/btnExitSettings"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="32sp"
+        android:text="Exit Settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUnpairTerminal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

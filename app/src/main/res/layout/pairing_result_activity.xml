@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context="screens.PairingResultActivity"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_white"
+        android:layout_width="560dp"
+        android:layout_height="560dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:gravity="center">
+            <FrameLayout
+                android:id="@+id/tr_header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:foregroundGravity="center"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="13dp"
+                android:background="@drawable/rectangle_header_red">
+                <TextView
+                    android:id="@+id/lblPairingResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/pairing_failed"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="24sp"
+                    android:gravity="center_horizontal|center_vertical"/>
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="32dp"
+            android:id="@+id/txtErrorCondition"
+            android:text="@string/test_string_short"
+            android:textSize="20sp"
+            android:gravity="top|center"
+            android:textColor="@color/adaptorRed"
+            android:layout_gravity="top"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAdditionalResponse"
+            android:text="@string/test_string_long"
+            android:layout_marginHorizontal="32dp"
+            android:textSize="20sp"
+            android:gravity="top|center"
+            android:textColor="@color/adaptorGrey"
+            android:layout_gravity="top"/>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom"
+            android:layout_margin="32dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_weight="1"
+                android:id="@+id/btnClose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                style="@style/Button.Primary"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
