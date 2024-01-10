@@ -18,5 +18,5 @@ build/
 app/src/main/AndroidManifest.xml
 
 # Private
-app/src/main/java/au/com/dmg/fusionadaptor/hio
+app/src/main/java/au/com/dmg/fusionadaptor/hio/
 app/build.gradle
