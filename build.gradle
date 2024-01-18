@@ -11,7 +11,7 @@ buildscript {
         app_id = 'au.com.dmg.fusionadaptor'
         app_name = 'Fusion Adaptor'
         apk_name = "FusionAdaptor"
-        major_version = "2" // Update every release, must be integer
+        major_version = "3" // Update every release, must be integer
         minor_version = 'a' // Update every build
     }
     dependencies {
