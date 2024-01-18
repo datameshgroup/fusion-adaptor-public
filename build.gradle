@@ -8,7 +8,7 @@ buildscript {
     ext.camerax_version = "1.0.2"
     ext.room_version = "2.4.2"
     ext {
-        app_id = 'au.com.dmg.fusionadaptor' //'au.com.hiopos.datamesh'
+        app_id = 'au.com.dmg.fusionadaptor'
         app_name = 'Fusion Adaptor'
         apk_name = "FusionAdaptor"
         major_version = "2" // Update every release, must be integer

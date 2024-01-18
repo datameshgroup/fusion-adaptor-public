@@ -45,7 +45,7 @@ object Configuration {
                 setUseTestEnvironment(context, false)
                 setShowResultScreen(context, true)
 
-                setPosName(context, "Hiopos") //TODO
+                setPosName(context, "FusionAdaptorDemo") //TODO
                 setFirstLoad(false)
             }
         }

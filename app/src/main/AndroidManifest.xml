@@ -16,8 +16,6 @@
         android:name="au.com.dmg.fusionadaptor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="au.com.hiopos.datamesh.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-
     <application
         android:name="au.com.dmg.fusionadaptor.FusionAdaptor"
         android:allowBackup="true"
@@ -45,7 +43,7 @@
              </intent-filter>
 
             <intent-filter>
-                <action android:name="icg.actions.electronicpayment.TefDatamesh.SHOW_SETUP_SCREEN" />
+                <action android:name="au.com.dmg.fusionadaptor.SHOW_MAIN_SCREEN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 

@@ -15,7 +15,6 @@ import au.com.dmg.fusion.request.paymentrequest.SaleItem
 import au.com.dmg.fusionadaptor.RequestBuilder
 import au.com.dmg.fusionadaptor.databinding.RequestActivityBinding
 import au.com.dmg.fusionadaptor.datastore.Configuration
-import au.com.dmg.fusionadaptor.hio.DatameshMapping
 import au.com.dmg.fusionadaptor.model.RequestData
 import au.com.dmg.fusionadaptor.utils.DatameshUtils
 import au.com.dmg.fusionadaptor.utils.DatameshUtils.Companion.logError
@@ -32,6 +31,8 @@ class RequestActivity: AppCompatActivity()  {
     var currentServiceID = ""
     var productCode =""
     private var tipAmount:BigDecimal?=null
+    private var onTerminal: Boolean = false
+
     @JvmField
     var requestData = RequestData()
     var saleToPOIRequest: SaleToPOIRequest? = null
@@ -39,6 +40,7 @@ class RequestActivity: AppCompatActivity()  {
 
     var reqIntent: Intent? = null
     private val requestBuilder = RequestBuilder
+    private var enableTipping: Boolean = false
 
 
     //TODO Add close button
@@ -60,8 +62,8 @@ class RequestActivity: AppCompatActivity()  {
             isPosOnTerminal = Configuration.getOnTerminal(applicationContext).first()
             val config = Configuration.getConfiguration(applicationContext).first()
             val isDev = Configuration.getUseTestEnvironment(applicationContext).first()
-            val enableTipping = Configuration.getEnableTip(applicationContext).first()
-            DatameshMapping.initRequestBuilder(config, isDev, isPosOnTerminal, enableTipping)
+            enableTipping = Configuration.getEnableTip(applicationContext).first()
+            requestBuilder.init(config, isDev, onTerminal)
         }
 
         currentServiceID = UUID.randomUUID().toString()
@@ -101,20 +103,26 @@ class RequestActivity: AppCompatActivity()  {
 
     private fun doTransaction(pt: PaymentType) {
         productCode = binding.inputProductCode.text.toString()
-        tipAmount.let{
+        tipAmount =
             if(binding.inputTipAmount.text.toString().isEmpty()){
                 BigDecimal(0)
             }else{
                 BigDecimal(binding.inputTipAmount.text.toString())
             }
-        }
-        val newTipAmount =
-            if(isPosOnTerminal){
-                if (tipAmount?.compareTo(BigDecimal.ZERO)!! > 0) tipAmount else null
-            }else{
-                tipAmount
-            }
 
+        val newTipAmount = if (tipAmount?.compareTo(BigDecimal.ZERO)!! > 0) {
+            // tipAmount received is greater than zero, just display on Satellite
+            tipAmount
+        } else if (enableTipping && onTerminal == true) {
+            // Tipping is enabled, on terminal, and we did not receive tipAmount
+            null
+        } else if (!enableTipping && onTerminal != true) {
+            // Tipping is enabled, on terminal, and we did not receive tipAmount
+            null
+        } else {
+            // Tipping is enabled, not on terminal, and we did not receive tipAmount
+            BigDecimal.ZERO
+        }
 
         val productCode = binding.inputProductCode.text.toString()
 

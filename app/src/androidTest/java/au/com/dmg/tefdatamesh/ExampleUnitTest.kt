@@ -2,7 +2,6 @@ package au.com.dmg.tefdatamesh
 
 
 import au.com.dmg.fusion.data.PaymentType
-import au.com.dmg.fusionadaptor.hio.HioposXMLMapping
 import org.junit.Test
 import org.w3c.dom.Document
 import org.w3c.dom.Element
@@ -34,7 +33,6 @@ class ExampleUnitTest {
 
         println("sellerId: $sellerId")
         val lineElements = doc.getElementsByTagName("Line")
-        val items = extractSaleItems(lineElements)
 
         println("----------")
 
@@ -66,34 +64,6 @@ class ExampleUnitTest {
             .firstOrNull()
     }
 
-    fun extractSaleItems(lineElements: NodeList): List<HioposXMLMapping.HioposSaleItem> {
-        val items = mutableListOf<HioposXMLMapping.HioposSaleItem>()
-
-        for (i in 0 until lineElements.length) {
-            val lineElement = lineElements.item(i) as Element
-            val productId = getElementText(lineElement, "LineField", "ProductId")
-            val name = getElementText(lineElement, "LineField", "Name")
-            val units = getElementText(lineElement, "LineField", "Units")
-            val price = getElementText(lineElement, "LineField", "Price")
-            val netAmount = getElementText(lineElement, "LineField", "NetAmount")
-
-            if (productId != null && name != null && units != null && price != null && netAmount != null) {
-                val newItem =
-                    HioposXMLMapping.HioposSaleItem.Builder()
-                        .itemID(i)
-                        .parentItemID(i)
-                        .productId(productId)
-                        .name(name)
-                        .units(units)
-                        .price(price)
-                        .netAmount(netAmount)
-                        .build()
-
-                items.add(newItem)
-            }
-        }
-        return items
-    }
 
     fun getElementsByTagName(parent: Node, tagName: String): List<Element> {
         val elements = mutableListOf<Element>()
